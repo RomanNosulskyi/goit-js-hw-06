@@ -10,8 +10,11 @@ function onSubmit(event) {
   if (email.value === "" || password.value === "") {
     return alert("Будь-ласка, заповніть всі поля форми");
   } else {
-    console.log(`Email: ${email.value}`);
-    console.log(`Password: ${password.value}`);
+    const formData = {
+      email: email.value,
+      password: password.value,
+    };
+    console.log(formData);
     event.currentTarget.reset();
   }
 }
